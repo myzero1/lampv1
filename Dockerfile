@@ -16,23 +16,23 @@ RUN apt-get update
 RUN apt-get -y upgrade
 
 # Basic Requirements
-RUN apt-get -y install mysql-server mysql-client nginx php5-fpm php5-mysql php-apc pwgen python-setuptools curl git unzip
+# RUN apt-get -y install mysql-server mysql-client nginx php5-fpm php5-mysql php-apc pwgen python-setuptools curl git unzip
 
 # mysql config
-RUN sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/mysql/my.cnf
+# RUN sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/mysql/my.cnf
 
 # apache config
 
 
 # Lamp Initialization and Startup Script
-ADD ./start.sh /start.sh
-RUN chmod 755 /start.sh
+#　ADD ./start.sh /start.sh
+# RUN chmod 755 /start.sh
 
 # private expose
 EXPOSE 3306
 EXPOSE 80
 
 # volume for mysql database and website install
-VOLUME ["/var/lib/mysql", "/usr/share/nginx/www"]
+# VOLUME ["/var/lib/mysql", "/usr/share/nginx/www"]
 
-CMD ["/bin/bash", "/start.sh"]
+# CMD ["/bin/bash", "/start.sh"]
