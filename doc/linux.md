@@ -103,7 +103,7 @@
     1. dpkg -r 卸载软件包.不是完全的卸载,它的配置文件还存在.
     1. dpkg -P 全部卸载(但是还是不能解决软件包的依赖性的问题)
     1. dpkg -reconfigure 重新配置
-3. 更多请参考http://www.cnblogs.com/forward/archive/2012/01/10/2318483.html
+3. 更多请参考 [这里](http://www.cnblogs.com/forward/archive/2012/01/10/2318483.html) 
 
 
 
