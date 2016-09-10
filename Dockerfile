@@ -45,10 +45,12 @@ RUN sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/mysq
 RUN apt-get -y install phpmyadmin
 RUN ln -s /usr/share/phpmyadmin /var/www/html
 
-
 # Lamp Initialization and Startup Script
 #　ADD ./start.sh /start.sh
 # RUN chmod 755 /start.sh
+RUN echo "# myzero1 added \
+service apache2 start \
+service mysql start" >> /etc/bash.bashrc
 
 # private expose
 EXPOSE 3306
