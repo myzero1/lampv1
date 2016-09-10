@@ -28,9 +28,9 @@ RUN apt-get -y install \
         unzip
 
 # add and config mysql 
-RUN cat <<MYSQL_PRESEED | debconf-set-selections \
-mysql-server-5.6 mysql-server/root_password_again password root \
-mysql-server-5.6 mysql-server/root_password password root \
+RUN cat <<MYSQL_PRESEED | debconf-set-selections 
+mysql-server-5.6 mysql-server/root_password_again password root 
+mysql-server-5.6 mysql-server/root_password password root 
 MYSQL_PRESEED 
 
 RUN apt-get -y install \
