@@ -48,8 +48,8 @@ RUN ln -s /usr/share/phpmyadmin /var/www/html
 # Lamp Initialization and Startup Script
 #　ADD ./start.sh /start.sh
 # RUN chmod 755 /start.sh
-RUN echo "# myzero1 added \
-service apache2 start \
+RUN echo "# myzero1 added 
+service apache2 start 
 service mysql start" >> /etc/bash.bashrc
 
 # private expose
