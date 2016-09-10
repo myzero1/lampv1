@@ -46,11 +46,9 @@ RUN apt-get -y install phpmyadmin
 RUN ln -s /usr/share/phpmyadmin /var/www/html
 
 # Lamp Initialization and Startup Script
-#　ADD ./start.sh /start.sh
-# RUN chmod 755 /start.sh
-RUN echo "# myzero1 added 
-service apache2 start 
-service mysql start" >> /etc/bash.bashrc
+ADD ./myzero1_start.sh /myzero1_start.sh
+RUN chmod 755 /myzero1_start.sh
+RUN echo "bash /myzero1_start.sh" >> /etc/bash.bashrc
 
 # private expose
 EXPOSE 3306
