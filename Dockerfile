@@ -18,10 +18,6 @@ RUN apt-get -y upgrade
 # Basic Requirements
 RUN apt-get -y install \
         apache2 \
-        mysql-client-core-5.6 \
-        mysql-client-5.6 \
-        mysql-server-core-5.6 \
-        mysql-server-5.6 \
         libapache2-mod-php5 \
         php5-cli \
         php5-fpm \
